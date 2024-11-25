@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 3</title>
-    
-<link rel="stylesheet" href="./index_files/estilo.css"></head>
+    <link rel="stylesheet" href="estilo.css">
+</head>
 <body>
     <header>
         <h1>.:: ACTIVIDAD #3 ::.</h1>
@@ -20,24 +20,24 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nemo dolore cupiditate iure quia quo soluta exercitationem, at error nostrum cum laudantium maiores, eos saepe quis ducimus voluptatibus libero. Voluptas.</p>
     <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laborum autem accusantium labore, reprehenderit optio at exercitationem, cum quisquam quia sunt harum qui ratione et sint sapiente soluta praesentium perferendis.</blockquote>
     <hr>
-    <img class="perfil" src="./index_files/imagen1.jpg" alt="">
+    <img class="perfil" src="imagen1.jpg" alt="">
     <br><br>
-    <a href="http://youtube.com/" target="_blank" rel="noopener noreferrer">ir a mi canal de youtube</a>
+    <a href="http://youtube.com" target="_blank" rel="noopener noreferrer">ir a mi canal de youtube</a>
     <hr>
     <h2>SESION 4</h2>
     <h3>Listas ordenadas</h3>
     <ol>
         <li>PROGRAMACION</li>
-        <li>MATEMATICAS</li>
-        <li>FUTBOL</li>
-        <li>PELICULAS</li>
+        <LI>MATEMATICAS</LI>
+        <LI>FUTBOL</LI>
+        <LI>PELICULAS</LI>
     </ol>
     <h3>Listas no ordenadas</h3>
     <ul>
         <li>BASQUETBOL</li>
-        <li>LEER</li>
-        <li>MANEJAR BICICLETA</li>
-        <li>VIAJAR</li>
+        <LI>LEER</LI>
+        <LI>MANEJAR BICICLETA</LI>
+        <LI>VIAJAR</LI>
     </ul>
     <h3>Listas de definicion</h3>
     <dl>
@@ -70,7 +70,7 @@
     <h3>TABLAS EN HTML</h3>
     <h4>Tabla simple</h4>
     <table> 
-        <tbody><tr>
+        <tr>
             <th>No.</th>
             <th>IDENTIFICACION</th>
             <th>NOMBRE</th>
@@ -90,46 +90,89 @@
             <td>3456</td>
             <td>PEDRO</td>
         </tr>
-    </tbody></table>
+    </table>
     <br><br>
-
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
-</body></html>
+    <hr>
+<h2>SESION 5</h2>
+<h3>Formularios</h3>
+<form action="#" method="get" id="Formulario1" name="Formulario1">
+    <label for="ident">Identificacion N°: </label>
+    <input type="number" name="ident" id="ident" value="" required>
+    <br>
+    <label for="Nom">Nombre: </label>
+    <input type="text" name="Nom" id="Nom" value="" placeholder="nombre completo">
+    <br>
+    <label for="ema">Correo Electronico: </label>
+    <input type="email" name="ema" id="ema" value="" placeholder="nombre@dominio.com">
+    <br>
+    <label for="clave">Contraseña: </label>
+    <input type="password" name="" id="clave" value="" required minlength="8" maxlength="16">
+    <hr>
+    <span>Genero</span>
+    <br>
+    <div class="Genero"> 
+    <label for="m">Maculinino</label>
+    <input type="radio" name="gen" id="m">
+    </div>
+    <div class="genero">
+        <label for="f">Femenino</label>
+        <input type="radio" name="gen" id="f">
+    </div>
+    <div class="genero">
+        <label for="o">otros</label>
+        <input type="radio" name="gen" id="o">
+    </div>
+    <hr>
+    <strong>Deportes</strong>
+    <br>
+    <input type="checkbox" name="dep" id="futbol" checked>
+    <label for="futbol">Futbol</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="dep" id="baloncesto" disabled>
+    <label for="baloncesto">Baloncesto</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="dep" id="voleibol">
+    <label for="voleibol">Voleibol</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="dep" id="tenis">
+    <label for="tenis">Tenis</label>
+    <hr>
+    <marquee behavior="" direction="">!!!COMENTARIOS!!!</marquee>
+    <textarea name="comt" id="comt" rows="5"></textarea>
+    <hr>
+    <fieldset>
+        <legend>Lista Desplegada</legend>
+        <div>
+            <label for="ciudad">Donde vives:</label>
+            <select name="ciudad" id="ciudad">
+                <option value="">seleccione una</option>
+                <option value="1">VALLEDUPAR</option>
+                <option value="2">LA PAZ</option>
+                <option value="3" disabled>CODAZZI</option>
+                <option value="4">LA JAGUA DE IBIRICO</option>
+                <option value="5">AGUACHICA</option>
+            </select>
+        </div>
+        <div>
+            <label for="">En que departamento vives</label>
+            <select name="" id="">
+                <optgroup label="region caribe">
+                    <option value="1">CESAR</option>
+                    <option value="2">ATLANTICO</option>
+                    <option value="3">GUAJIRA</option>
+                </optgroup>
+                <optgroup label="region andina">
+                    <option value="1">NARIÑO</option>
+                    <option value="2">ANTIQUIA</option>
+                    <gitoption value="3">VALLE DEL CAUCA</gitoption>
+                </optgroup>
+            </select>
+        </div>
+    </fieldset>
+    
+    
+        
+    
+</form>
+</body>
+</html>

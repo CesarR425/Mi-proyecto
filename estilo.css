@@ -52,3 +52,9 @@ table{
    text-align: center;
    border: 3px solid;
 }
+
+/*Estilos de la sesion 5*/
+.genero{
+     display: inline;
+     margin: 10px auto; 
+}
